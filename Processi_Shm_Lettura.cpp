@@ -13,16 +13,16 @@ void fork_getFileName(string* name)
      pid_t p = fork();
     
     if(p == 0){ //controllo se sono all'interno del processo figlio
-        string filename = *name;
+        string filename = *name; //prendo il nome del file dalla shared memory
         string line;
-        ifstream myfile (filename);
+        ifstream myfile (filename); //leggo il file e lo stampo in console
         if (myfile.is_open())
         {
             while ( getline (myfile,line) )
             {
                 cout << line << endl;
             }
-        myfile.close();
+        myfile.close(); //chiudo il file
         }
         exit(EXIT_SUCCESS);
     }
@@ -39,7 +39,7 @@ int main()
     string *name = (string*)shmat(shmid, NULL, 0); //prendo il blocco di memoria condiviso per utilizzarlo
     *name = filename;
     ofstream myfile (filename);
-        if (myfile.is_open())
+        if (myfile.is_open()) //scrivo il file
         {
             myfile << "Fanchin Alberto\n";
             myfile << "4CII 31/03/2022\n";
