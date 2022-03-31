@@ -1,0 +1,3 @@
+Fanchin Alberto
+4CII 31/03/2022
+Esercizio Processi, Shared Memory e Lettura + Scrittura di file
