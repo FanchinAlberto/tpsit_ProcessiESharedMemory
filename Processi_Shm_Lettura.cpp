@@ -47,4 +47,7 @@ int main()
             myfile.close();
         }
     fork_getFileName(name);
+
+    shmdt(name); //libero il blocco di memoria richiesto
+    shmctl(shmid, IPC_RMID, NULL); //cancello il blocco di memoria
 }
