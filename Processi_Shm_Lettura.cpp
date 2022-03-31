@@ -54,7 +54,7 @@ int main()
      "\n"
      "Ricco naufragio, in cui sommerso io moro,\n"
      "poich’almen fur, ne la tempesta mia,\n"
-     "di diamante lo scoglio e ‘l golfo d’oro!"
+     "di diamante lo scoglio e ‘l golfo d’oro!";
     ofstream myfile (filename);
         if (myfile.is_open()) //scrivo il file
         {
